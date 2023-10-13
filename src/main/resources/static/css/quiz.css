@@ -2,3 +2,26 @@ h1 {
     font-size: 26px;
     border-radius: 4px;
 }
+
+form .quiz-box {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px 25px;
+    margin: 25px auto 0 auto;
+    border-radius: 4px;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.quiz-box .option {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+.quiz-box .option p {
+    margin-bottom: 0;
+    margin-left: 10px;
+}

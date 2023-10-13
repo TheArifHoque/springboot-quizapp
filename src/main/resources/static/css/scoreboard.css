@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+table tr {
+    border-bottom: 1px solid white;
+    line-height: 35px;
+}

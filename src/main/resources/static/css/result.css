@@ -1,0 +1,33 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.result-card {
+    margin-top: 100px;
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 32px;
+    border-radius: 4px;
+}
+
+img {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: -150px auto 0 auto;
+}
+
+.result-card p {
+    font-weight: 500;
+}
+
+button {
+    width: 45%;
+}

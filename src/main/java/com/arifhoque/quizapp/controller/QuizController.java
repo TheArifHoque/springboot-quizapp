@@ -19,7 +19,7 @@ import java.util.List;
 public class QuizController {
     @Autowired
     private QuizService quizService;
-    @Autowired
+
     private Result result;
 
     Boolean isSubmitted;
@@ -36,6 +36,7 @@ public class QuizController {
             return "redirect:/";
         }
         isSubmitted = false;
+        result = new Result();
         result.setUsername(username);
         QuestionForm qform = quizService.getRandomQuestions();
         model.addAttribute("qForm",qform);

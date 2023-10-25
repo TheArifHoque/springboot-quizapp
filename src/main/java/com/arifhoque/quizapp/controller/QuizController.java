@@ -24,6 +24,8 @@ public class QuizController {
 
     Boolean isSubmitted;
 
+    private static final Integer NUMBER_OF_QUES = 5;
+
     @GetMapping("/")
     public String home() {
         return "index.html";
@@ -38,7 +40,7 @@ public class QuizController {
         isSubmitted = false;
         result = new Result();
         result.setUsername(username);
-        QuestionForm qform = quizService.getRandomQuestions();
+        QuestionForm qform = quizService.getRandomQuestions(NUMBER_OF_QUES);
         model.addAttribute("qForm",qform);
 
         return "quiz.html";
@@ -51,6 +53,7 @@ public class QuizController {
             quizService.saveScore(result);
             isSubmitted = true;
             model.addAttribute("result",result);
+            model.addAttribute("numberOfQues",NUMBER_OF_QUES);
         }
         return "result.html";
     }

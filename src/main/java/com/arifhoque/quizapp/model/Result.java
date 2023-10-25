@@ -1,9 +1,10 @@
 package com.arifhoque.quizapp.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,8 +12,14 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 public class Result {
+    @Id
+    @GeneratedValue
+    @Column(name = "result_id")
     private Integer resultId;
+    @Column(name = "username")
     private String username;
+    @Column(name = "total_correct")
     private Integer totalCorrect;
 }
